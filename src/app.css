@@ -5,3 +5,14 @@ html, body {
 * {
   box-sizing: border-box;
 }
+
+.animate2 {
+  width: 60px;
+  height: 60px;
+  background-color: orange;
+  transition: all 1s;
+}
+
+.animated {
+  margin-top: 400px
+}
