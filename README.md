@@ -161,7 +161,7 @@ touch .babelrc
   "presets": [
     "es2015",
     "react",
-    "stage-2"
+    "stage-2" // if you installed babel-preset-stage-2
   ]
 }
 ```
