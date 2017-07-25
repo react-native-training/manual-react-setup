@@ -166,8 +166,9 @@ touch .babelrc
 }
 ```
 
-19. Add additional configuration to webpack.config.js   
+19. Add babel configuration to webpack.config.js   
 ```
+...
 module: {
   loaders: [{
     test: /\.jsx?$/,
@@ -178,4 +179,28 @@ module: {
 resolve: {
   extensions: ['*', '.js', '.jsx']
 },
-  ```
+...
+```
+
+20. Add style loader and css loader to webpack.config.js   
+```
+npm i css-loader style-loader --save-dev
+```
+
+21. Update webpack.config.js to add style and css configuration   
+```
+module: {
+  loaders: [
+    {
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loader: 'react-hot-loader!babel-loader'
+    },
+    { // new
+      test: /\.css$/,
+      exclude: /^node_modules$/,
+      loader: 'style-loader!css-loader',
+    }
+  ]
+},
+```
