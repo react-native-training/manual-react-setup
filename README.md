@@ -204,3 +204,24 @@ module: {
   ]
 },
 ```
+
+22. Install React (from root directory)   
+```
+npm i --save react react-dom
+```
+
+23. Update src/index.js to render application   
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const title = 'React Webpack Babel Setup Complete!';
+
+ReactDOM.render(
+  <div>{title}</div>,
+  document.getElementById('app')
+);
+
+module.hot.accept();
+```
+
