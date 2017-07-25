@@ -49,7 +49,7 @@ touch index.html
 
 ### Webpack Setup
 
-4. Install webpack   
+4. Install webpack (from root of directory)   
 ```
 npm install --save-dev webpack webpack-dev-server
 ```
