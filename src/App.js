@@ -24,7 +24,7 @@ class App extends React.Component {
       <div style={styles.container}>
         <p>Hello</p>
         <button onClick={this.animate.bind(this)}>Animate</button>
-        <Motion style={{ x: spring(this.state.open ? 400 : 0), y: spring(this.state.open ? 400 : 0) }}>
+        <Motion style={{ x: spring(this.state.open ? 400 : 0, { stiffness: 54, damping: 15 }), y: spring(this.state.open ? 400 : 0) }}>
           {
             ({ x, y }) => (
               <div style={Object.assign(
